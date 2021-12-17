@@ -1,0 +1,71 @@
+public class Evento{
+    private String nome;
+    private String local;
+    private String data;
+    private String horario;
+    
+  
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+    
+}
+
+//////////////////////////////////
+
+package video.pkg3;
+
+import org.springFraework.stereotype.Controller;
+import org.stringfamework.web.bind.annotation.RequestMapping;
+@Controller
+public class Video3 {
+
+    @RequestMapping("/cadastrarEvento")
+    public String form(){
+        return "formEvento";
+      
+    }
+    
+}
+
+/////////////////////////////////
+
+<!DOCTYPE html>
+<html xmlns : th = "http:??thymeleaf.org"
+xmls: layout = "http//www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>EventosApp</title>
+</head>
+<body>
+<h1>Cadastro de Eventos : </h1>
+<form method = "post">
+Nome: <input type="text" values="" name="nome"/>
+Local: <input type="text" values="" name="local"/>
+Data: <input type="text" values="" name="data"/>
+Horario: <input type="text" values="" name="horario"/>
+
+<button type="submit">Salvar</button>
+</form>
+
+</body>
+</html>
