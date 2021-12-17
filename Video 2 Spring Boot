@@ -1,0 +1,33 @@
+package eventoapplication;
+
+import org.springgframework.boot.SpringApplication;
+
+@SpringBootApplication
+public class EventoApplication {
+
+    
+    public static void main(String[] args) {
+        SpringApplication.run(EentApplication.class, args);
+    }
+    
+}
+
+///////////////////////////////////////
+
+
+package eventoapplication;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class IndexController {
+  
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
+}
+
+///////////////////////////
+
