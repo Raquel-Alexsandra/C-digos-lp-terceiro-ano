@@ -37,3 +37,26 @@ public class Teste {
         );
     }
 }
+
+
+
+/////////////////////////////////
+
+package video.pkg1;
+
+import org.springframwork.web.bind.annotation.RequestMapping;
+import org.springfraamework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldController {
+ @RequestMapping
+ 
+ public String helloWorld(){
+     return "heelo world from Spring Boot";
+ }
+ 
+ @RequestMapping("/goodbye")
+ public String goodbye(){
+     return "hoodbye from spring boot";
+}
+}
