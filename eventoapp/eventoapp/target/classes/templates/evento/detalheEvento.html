@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Incon font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="css/basic.css" type="text/css" rel="stylesheet">
+    <link href="css/forms.css" type="text/css" rel="stylesheet">
+    <link href="css/detalhesEvento.css" type="text/css" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css media="screem.projection"/>
+  
+    
+     
+    <title>EventosApp</title>
+</head>
+<body>
+    <h1>Evento</h1>
+    <h3><a href="/eventos" class="waves-effect waves-light bnt"><i class="material-icons left">add_circle_outline</i>Lista de eventos</a></h3>
+
+    <div th:each="evento : ${evento}" class="container>
+
+        <div class="row">
+            <p>Nome: <span th:text="${evento.nome}"></span></p>
+            <p>Local: <span th:text="${evento.local}"></span></p>
+            <p>Data: <span th:text="${evento.data}"></span></p>
+            <p>Horário: <span th:text="${evento.horario}"></span></p>
+        </div>
+
+        <form method="post">
+            <p><input type="text" value="" name="nomeConvidado" placeholder="Nome do Convidado"></p>
+            <p><input type="text" value="" name="rg" placeholder="RG"></p>
+            <button class="waves-effect waves-ligth bnt" type="submit">Adicionar</button>
+        </form>
+     
+     </div> 
+	    <h5>Lista de Convidados: </h5>
+	    <div class="container" th:each="convidado : ${convidado}">
+	    
+	    <div class="row">
+	    	<div class="imput - field col s6">
+	    	    <p><span th:text= "${convidado.nomeConvidado}"></span></p>
+		</div>
+		<div class="imput - field col s3">
+	    	    <p><span th:text= "${convidado.rg}"></span></p>
+		</div>
+	    </div>
+        </div>
+
+</body>
+</html>
